@@ -39,14 +39,43 @@
   --midnight-2: #F2EDE0;
   --midnight-3: #E8E0CC;
   --text-primary: #1a1208;
-  --text-dim: rgba(26, 18, 8, 0.7);
-  --text-muted: rgba(26, 18, 8, 0.45);
-  --card-bg: rgba(201, 168, 76, 0.06);
-  --card-border: rgba(201, 168, 76, 0.3);
-  --glass: rgba(250, 247, 240, 0.7);
+  --text-dim: rgba(26, 18, 8, 0.82);
+  --text-muted: rgba(26, 18, 8, 0.58);
+  --card-bg: rgba(201, 168, 76, 0.08);
+  --card-border: rgba(201, 168, 76, 0.35);
+  --glass: rgba(250, 247, 240, 0.85);
   --section-bg: var(--midnight);
   --section-alt: var(--midnight-2);
+  
+  /* Make sure golds have sufficient contrast in light theme */
+  --gold: #9E7D2D;
+  --gold-light: #7D6122; /* darker gold/brown for readability on light bg */
+  --gold-dark: #523F14;
+  --ivory: #1a1208; /* dark brown/black instead of cream so `.section-title.light` is readable */
+  --card-glow: rgba(158, 125, 45, 0.15);
 }
+
+[data-theme="light"] .invite-front {
+  background: linear-gradient(135deg, #FCFBF7, #FAF7F0, #F2EDE0);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), inset 0 0 80px rgba(201, 168, 76, 0.04);
+  border-color: var(--gold);
+}
+
+[data-theme="light"] .nikah-card {
+  background: linear-gradient(135deg, rgba(27, 107, 58, 0.15), var(--midnight-2));
+}
+
+[data-theme="light"] .walima-card {
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.2), var(--midnight-2));
+}
+
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group select,
+[data-theme="light"] .form-group textarea {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(201, 168, 76, 0.4);
+}
+
 
 /* ---- RESET & BASE ---- */
 *,
@@ -875,15 +904,38 @@ body {
 }
 
 .couple-photo-placeholder {
-  width: 120px;
-  height: 120px;
-  border: 2px solid var(--gold);
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(201, 168, 76, 0.08);
+  position: relative;
+  background: var(--midnight-2);
   color: var(--gold);
+  padding: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Instagram-style Story Ring */
+.couple-photo-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: rotateStoryRing 8s linear infinite;
+}
+
+@keyframes rotateStoryRing {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .photo-geo-border {
@@ -2226,4 +2278,92 @@ body {
   #audio-btn .audio-label {
     display: none;
   }
+}
+
+/* ---- NEW CUSTOM STYLES (PRELOADER FAMILY & SVG SIZE) ---- */
+.preloader-family {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin-top: 0.5rem;
+  letter-spacing: 0.05em;
+  font-style: italic;
+  opacity: 0;
+  animation: fadeInUp 0.8s 1.2s forwards;
+}
+
+.couple-photo-placeholder svg {
+  width: 90%;
+  height: 90%;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+/* ---- FOOTER FAMILY MEMBERS STYLES ---- */
+.footer-family-invitation {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2.5rem auto 1.5rem;
+  max-width: 650px;
+  flex-wrap: wrap;
+}
+
+.footer-family-column {
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+}
+
+.footer-family-column h4 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  border-bottom: 1px dashed rgba(201, 168, 76, 0.3);
+  padding-bottom: 0.4rem;
+  letter-spacing: 0.05em;
+}
+
+.footer-family-column p {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.footer-family-column p strong {
+  color: var(--text-primary);
+}
+
+.footer-relatives {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+.footer-thanks {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.05em;
+  font-family: var(--font-display);
+}
+
+.highlight-name {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--gold);
+  text-shadow: 0 0 12px rgba(201, 168, 76, 0.4);
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.15), rgba(201, 168, 76, 0.03));
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 0.3rem 1.2rem;
+  border-radius: 30px;
+  margin-top: 0.5rem;
 }
