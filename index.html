@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wedding Invitation of Yusuf & Maryam – A Blessed Union. Join us to celebrate our Nikah and Walima." />
+  <meta property="og:title" content="Yusuf & Maryam – Islamic Wedding Invitation" />
+  <meta property="og:description" content="With the blessings of Allah, we invite you to our Nikah ceremony." />
+  <meta name="theme-color" content="#0a0a14" />
+  <title>Mohseen & Muskan – A Blessed Union</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Naskh+Arabic:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Manifest for PWA -->
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <div class="preloader-spinner">
+      <svg viewBox="0 0 100 100" class="geo-spin">
+        <use href="#star-of-rub" x="25" y="25" width="50" height="50"/>
+      </svg>
+    </div>
+    <div class="preloader-text">Loading a Blessed Invitation…</div>
+  </div>
+</div>
+
+<!-- SVG DEFS (patterns, icons) -->
+<svg style="display:none">
+  <defs>
+    <symbol id="star-of-rub" viewBox="0 0 50 50">
+      <polygon points="25,2 30,18 47,18 34,28 39,45 25,35 11,45 16,28 3,18 20,18" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </symbol>
+    <symbol id="crescent" viewBox="0 0 40 40">
+      <path d="M20 5 A15 15 0 1 0 20 35 A10 10 0 1 1 20 5Z" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- FLOATING PARTICLES CANVAS -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <svg width="24" height="24" viewBox="0 0 40 40"><use href="#crescent"/></svg>
+    <span>M &amp; M</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#couple" data-i18n="nav_couple">Couple</a></li>
+    <li><a href="#events" data-i18n="nav_events">Events</a></li>
+    <li><a href="#quran" data-i18n="nav_quran">Quran</a></li>
+  </ul>
+  <div class="nav-controls">
+    <button id="theme-toggle" aria-label="Toggle theme">
+      <span class="theme-icon">☽</span>
+    </button>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu">
+  <ul>
+    <li><a href="#couple" data-i18n="nav_couple">Couple</a></li>
+    <li><a href="#events" data-i18n="nav_events">Events</a></li>
+    <li><a href="#quran" data-i18n="nav_quran">Quran</a></li>
+  </ul>
+</div>
+
+<!-- AUDIO CONTROL -->
+<button id="audio-btn" aria-label="Toggle music">
+  <span class="audio-icon">♪</span>
+  <span class="audio-label">Nasheed</span>
+</button>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero">
+  <div class="hero-geo-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-moon">
+    <div class="moon-glow"></div>
+    <svg class="moon-svg" viewBox="0 0 100 100"><use href="#crescent" width="100" height="100"/></svg>
+    <div class="moon-stars">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="hero-content reveal">
+    <p class="hero-bismillah arabic-text">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+    <p class="hero-bismillah-en">In the Name of Allah, the Most Gracious, the Most Merciful</p>
+    <!-- <div class="hero-divider"><span></span><svg viewBox="0 0 50 50"><use href="#star-of-rub" width="20" height="20"/></svg><span></span></div> -->
+    <h1 class="hero-names">
+      <span class="groom-name" data-i18n="hero_groom">Mohseen</span>
+      <span class="names-amp">&amp;</span>
+      <span class="bride-name" data-i18n="hero_bride">Muskan</span>
+    </h1>
+    <p class="hero-date" data-i18n="hero_date">Friday, 5th Dhul Hijja 1447 · May 22, 2026</p>
+    <blockquote class="hero-verse">
+      <p class="arabic-text">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا</p>
+      <cite>— Surah Ar-Rum 30:21</cite>
+    </blockquote>
+    <a href="#couple" class="btn-primary hero-cta" data-i18n="hero_cta">
+      <span>View Invitation</span>
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </div>
+  <div class="hero-lanterns">
+    <div class="lantern l1"></div>
+    <div class="lantern l2"></div>
+    <div class="lantern l3"></div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-dot"></div>
+  </div>
+</section>
+
+<!-- PATTERN DIVIDER -->
+
+
+<!-- ===================== COUNTDOWN ===================== -->
+<section id="countdown-section">
+  <div class="container">
+    <p class="section-subtitle arabic-text">الوقت المتبقي</p>
+    <h2 class="section-title" data-i18n="countdown_title">Counting Down to the Blessed Day</h2>
+    <div class="countdown-grid">
+      <div class="countdown-item"><span id="cd-days">00</span><label data-i18n="cd_days">Days</label></div>
+      <div class="countdown-item"><span id="cd-hours">00</span><label data-i18n="cd_hours">Hours</label></div>
+      <div class="countdown-item"><span id="cd-mins">00</span><label data-i18n="cd_mins">Minutes</label></div>
+      <div class="countdown-item"><span id="cd-secs">00</span><label data-i18n="cd_secs">Seconds</label></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COUPLE ===================== -->
+<section id="couple">
+  <div class="container">
+    <p class="section-subtitle arabic-text">العروس والعريس</p>
+    <h2 class="section-title" data-i18n="couple_title">The Blessed Couple</h2>
+    <div class="couple-grid">
+      <!-- Groom -->
+      <div class="couple-card reveal" data-delay="0">
+        <div class="couple-photo-wrap groom-side">
+          <div class="couple-photo-placeholder">
+            <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="30" r="18" stroke="currentColor" stroke-width="2"/><path d="M10 75 Q40 55 70 75" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+          </div>
+          <div class="photo-geo-border"></div>
+        </div>
+        <div class="couple-info">
+          <span class="couple-role" data-i18n="groom_label">The Groom</span>
+          <h3 class="couple-name" data-i18n="groom_name">Mohseen Khan</h3>
+          <p class="couple-family" data-i18n="groom_family">Son of Mr. & Mrs. Md Sharif Nagarboudi</p>
+          <p class="couple-bio" data-i18n="groom_bio">A devoted servant of Allah, engineer by profession, and lover of knowledge. Yusuf carries warmth in his heart and faith as his foundation.</p>
+          <p class="couple-quote arabic-text">النِّكَاحُ مِنْ سُنَّتِي</p>
+          <p class="couple-quote-trans">"Nikah is from my Sunnah" — Prophet Muhammad ﷺ</p>
+        </div>
+      </div>
+      <!-- Bride -->
+      <div class="couple-card reveal" data-delay="200">
+        <div class="couple-photo-wrap bride-side">
+          <div class="couple-photo-placeholder">
+            <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="30" r="18" stroke="currentColor" stroke-width="2"/><path d="M10 75 Q40 55 70 75" stroke="currentColor" stroke-width="2" fill="none"/><path d="M22 12 Q40 5 58 12 Q56 0 40 0 Q24 0 22 12Z" fill="currentColor" opacity="0.3"/></svg>
+          </div>
+          <div class="photo-geo-border"></div>
+        </div>
+        <div class="couple-info">
+          <span class="couple-role" data-i18n="bride_label">The Bride</span>
+          <h3 class="couple-name" data-i18n="bride_name">Muskan</h3>
+          <p class="couple-family" data-i18n="bride_family">Daughter of Mr. & Mrs. Sayed Hussain Khainur</p>
+          <p class="couple-bio" data-i18n="bride_bio">A woman of grace, deen, and compassion. Maryam is a teacher by heart, whose smile carries the light of imaan and whose character mirrors the Sahabiyyat.</p>
+          <p class="couple-quote arabic-text">الدُّنْيَا مَتَاعٌ وَخَيْرُ مَتَاعِهَا الْمَرْأَةُ الصَّالِحَة</p>
+          <p class="couple-quote-trans">"The world is a provision, and the best provision is a righteous woman." — Prophet Muhammad ﷺ</p>
+        </div>
+      </div>
+    </div>
+    <!-- Family message -->
+    <div class="family-message reveal">
+      <div class="family-msg-inner">
+        <svg class="family-icon" viewBox="0 0 40 40"><use href="#crescent" width="40" height="40"/></svg>
+        <p data-i18n="family_msg">With immense joy and gratitude to Allah ﷻ, the families of <strong>Ahmad Al-Farsi</strong> and <strong>Ibrahim Al-Rashid</strong> cordially invite you to celebrate the union of their beloved children in the sacred bond of Nikah.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== EVENTS ===================== -->
+<section id="events">
+  <div class="container">
+    <p class="section-subtitle arabic-text">مواعيد الفرح</p>
+    <h2 class="section-title" data-i18n="events_title">Wedding Events</h2>
+    <div class="events-grid">
+      <!-- Nikah -->
+      <div class="event-card reveal" data-delay="0">
+        <div class="event-card-top nikah-card">
+          <div class="event-geo"></div>
+          <svg class="event-icon" viewBox="0 0 40 40"><use href="#crescent" width="30" height="30"/></svg>
+          <h3 data-i18n="nikah_title">Nikah Ceremony</h3>
+        </div>
+        <div class="event-card-body">
+          <div class="event-detail"><span class="ev-icon">📅</span><div><strong data-i18n="ev_date">Date</strong><p>Friday, May 22, 2026</p></div></div>
+          <div class="event-detail"><span class="ev-icon">⏱️</span><div><strong data-i18n="ev_time">Time</strong><p>After Jummah Salah – 2:00 PM</p></div></div>
+          <div class="event-detail"><span class="ev-icon">📍</span><div><strong data-i18n="ev_venue">Venue</strong><p>Old Chandkotte Road, Abu function Hall sindgi</p></div></div>
+        </div>
+      </div>
+      <!-- Walima -->
+      <div class="event-card reveal" data-delay="150">
+        <div class="event-card-top walima-card">
+          <div class="event-geo"></div>
+          <svg class="event-icon" viewBox="0 0 50 50"><use href="#star-of-rub" width="30" height="30"/></svg>
+          <h3 data-i18n="walima_title">Walima Reception</h3>
+        </div>
+        <div class="event-card-body">
+          <div class="event-detail"><span class="ev-icon">📅</span><div><strong data-i18n="ev_date">Date</strong><p>Sunday, May 24, 2026</p></div></div>
+          <div class="event-detail"><span class="ev-icon">⏱️</span><div><strong data-i18n="ev_time">Time</strong><p>12:30 PM</p></div></div>
+          <div class="event-detail"><span class="ev-icon">📍</span><div><strong data-i18n="ev_venue">Venue</strong><p>SethJI Hall near Iqra school Vijayapura</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="map-section reveal">
+      <h3 class="map-title" data-i18n="map_title">📍 Venue Location</h3>
+      <div class="map-tabs">
+        <button id="btn-map-nikah" class="map-tab-btn active" onclick="switchMap('nikah')">Nikah (Sindagi)</button>
+        <button id="btn-map-walima" class="map-tab-btn" onclick="switchMap('walima')">Walima (Vijayapura)</button>
+      </div>
+      <div class="map-wrapper">
+        <iframe
+          src="https://maps.google.com/maps?q=Abu%20Function%20Hall,%20Sindagi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="350" style="border:0;border-radius:12px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="map-contacts">
+        <a href="tel:+919886511761" class="contact-btn">+91 9886511761</a>
+        <a href="tel:+917676786487" class="contact-btn">+91 7676786487</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div class="pattern-divider"><div class="geo-pattern"></div></div> -->
+
+<!-- ===================== QURAN SECTION ===================== -->
+<section id="quran">
+  <div class="quran-bg"></div>
+  <div class="container">
+    <p class="section-subtitle arabic-text">كلام الله</p>
+    <h2 class="section-title light" data-i18n="quran_title">Quran & Sunnah on Marriage</h2>
+    <div class="quran-cards">
+      <div class="quran-card reveal">
+        <div class="qcard-label">Quran 30:21</div>
+        <p class="arabic-text qcard-arabic">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+        <p class="qcard-trans">"And of His signs is that He created for you from yourselves mates that you may find tranquillity in them; and He placed between you affection and mercy."</p>
+      </div>
+      <div class="quran-card reveal" data-delay="150">
+        <div class="qcard-label">Quran 2:187</div>
+        <p class="arabic-text qcard-arabic">هُنَّ لِبَاسٌ لَّكُمْ وَأَنتُمْ لِبَاسٌ لَّهُنَّ</p>
+        <p class="qcard-trans">"They are a garment for you and you are a garment for them."</p>
+      </div>
+      <div class="quran-card reveal" data-delay="300">
+        <div class="qcard-label">Hadith – Sahih Bukhari</div>
+        <p class="arabic-text qcard-arabic">النِّكَاحُ مِنْ سُنَّتِي فَمَنْ لَمْ يَعْمَلْ بِسُنَّتِي فَلَيْسَ مِنِّي</p>
+        <p class="qcard-trans">"Nikah is my Sunnah. Whoever does not follow my Sunnah is not from me." — Prophet Muhammad ﷺ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pattern-divider"><div class="geo-pattern"></div></div>
+
+
+<!-- ===================== DIGITAL INVITATION ===================== -->
+<section id="invitation-card-section">
+  <div class="container">
+    <p class="section-subtitle arabic-text">بطاقة الدعوة</p>
+    <h2 class="section-title" data-i18n="invite_title">Digital Invitation Card</h2>
+    <div class="invite-card-wrap">
+      <div class="invite-card" id="invite-card">
+        <div class="invite-card-inner" id="invite-card-inner">
+          <!-- Front -->
+          <div class="invite-front">
+            <div class="invite-geo-border"></div>
+            <p class="invite-bismillah arabic-text">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+            <div class="invite-crescent">
+              <svg viewBox="0 0 40 40"><use href="#crescent" width="40" height="40"/></svg>
+            </div>
+            <h2 class="invite-heading">Wedding Invitation</h2>
+            <p class="invite-sub">You are cordially invited to the Nikah of</p>
+            <div class="invite-names">Mohseen Khan<span>&amp;</span>Muskan</div>
+            <p class="invite-date-text">Friday · May 22, 2026</p>
+            <p class="invite-venue-text">Old Chandkotte Road, Abu function Hall sindgi</p>
+            <p class="arabic-text invite-verse">وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+            <div class="invite-star"><svg viewBox="0 0 50 50"><use href="#star-of-rub" width="30" height="30"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="footer">
+  <div class="footer-geo"></div>
+  <div class="container footer-inner">
+    <div class="footer-moon">
+      <svg viewBox="0 0 40 40"><use href="#crescent" width="40" height="40"/></svg>
+    </div>
+    <p class="footer-names">Mohseen &amp; Muskan</p>
+    <p class="footer-verse arabic-text">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ</p>
+    <p class="footer-verse-trans">"Our Lord, grant us from among our wives and offspring comfort to our eyes…" — Quran 25:74</p>
+    <p class="footer-copy">Made with ❤️ &amp; Dua · Mohseen &amp; Muskan 2026</p>
+  </div>
+</footer>
+
+<!-- DUA POPUP -->
+<div class="dua-popup" id="dua-popup">
+  <div class="dua-popup-inner">
+    <button class="popup-close" onclick="closeDuaPopup()">✕</button>
+    <svg viewBox="0 0 40 40"><use href="#crescent" width="40" height="40"/></svg>
+    <h3>A Dua for You</h3>
+    <p class="arabic-text">اللَّهُمَّ بَارِكْ لَهُمَا وَبَارِكْ عَلَيْهِمَا وَاجْمَعْ بَيْنَهُمَا فِي خَيْرٍ</p>
+    <p>May Allah bless you both, and join you together in goodness. Ameen.</p>
+    <button class="btn-primary" onclick="closeDuaPopup()">Say Ameen</button>
+  </div>
+</div>
+<div class="popup-overlay" id="popup-overlay" onclick="closeDuaPopup()"></div>
+
+<!-- CONFETTI CANVAS -->
+<canvas id="confetti-canvas"></canvas>
+
+<script src="js/main.js"></script>
+</body>
+</html>
